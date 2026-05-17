@@ -199,7 +199,7 @@ void Name(char a[],int map[mapsize][mapsize]){
             int temp;
             scanf("%d",&temp);
             if(temp==1){
-                char path[30]=".Data/";
+                char path[30]="Data/";
                 strcat(path,name);
                 FILE *fp;
                 fp=fopen(path,"w");
@@ -213,7 +213,7 @@ void Name(char a[],int map[mapsize][mapsize]){
         }
     }
     else if(0<enter && enter<count){
-        DIR *dir=opendir(".Data");
+        DIR *dir=opendir("Data");
         struct dirent *e;
         for(int i=1;i<enter+2;i++){
             e=readdir(dir);
@@ -221,7 +221,7 @@ void Name(char a[],int map[mapsize][mapsize]){
         e=readdir(dir);
         char name[20]="";
         strcat(name,e->d_name);
-        char path[30]=".Data/";
+        char path[30]="Data/";
         strcat(path,name);
         strcat(a,path);
         closedir(dir);
@@ -232,7 +232,7 @@ void Name(char a[],int map[mapsize][mapsize]){
 }   
 //-----本体-------
 int main(void){
-    const char *dir=".Data";
+    const char *dir="Data";
     struct stat st;
     if(stat(dir,&st)==0){}
     else if(errno==ENOENT){
