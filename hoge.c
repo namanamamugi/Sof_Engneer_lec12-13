@@ -17,7 +17,7 @@
 #define NORMAL_TERMINATION 777
 #define NANKA_WAKANNAI 666
 #define GACHIDE_WAKANNAI 999
-#define HONMA_NANIKORE 8888
+
 
 //画面リフレッシュ
 void clear() {
