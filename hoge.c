@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<termios.h>
 #include<time.h>
 #include<stdlib.h>
 #include<sys/stat.h>
@@ -15,9 +14,6 @@
 #define NO_DATA 100
 #define INCORRECT_PASS 200
 #define NORMAL_TERMINATION 777
-
-
-
 //画面リフレッシュ
 void clear() {
     printf("\033[2J\033[1;1H");
